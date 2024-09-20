@@ -6,10 +6,12 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @EqualsAndHashCode(callSuper = true)
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
 public class Triangulo extends PoligonoRegular {
+
+    public Triangulo(Double medidaLado) {
+        super(medidaLado, 3);
+    }
 
     @Override
     public Double calcularArea() {

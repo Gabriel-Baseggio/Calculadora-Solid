@@ -7,15 +7,11 @@ import lombok.NoArgsConstructor;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class Pentagono extends PoligonoRegular {
-
-    public Pentagono(Double medidaLado) {
-        super(medidaLado, 5);
-    }
+public class QualquerPoligonoRegular extends PoligonoRegular {
 
     @Override
     public Double calcularArea() {
-        return 5 * medidaLado * calcularApotema();
+        return quantidadeLados * medidaLado * calcularApotema();
     }
 
     public Double calcularApotema() {
