@@ -9,7 +9,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public abstract class Poligono implements Forma {
+public abstract class PoligonoRegular implements Forma {
 
     protected List<Double> medidasLados;
 
