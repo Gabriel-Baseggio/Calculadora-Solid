@@ -28,5 +28,4 @@ public class Pentagono extends PoligonoRegular {
         return triangulo.calcularArea();
     }
 
-
 }
