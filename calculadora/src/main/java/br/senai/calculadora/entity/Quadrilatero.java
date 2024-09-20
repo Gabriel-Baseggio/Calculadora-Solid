@@ -4,20 +4,22 @@ import java.util.List;
 
 public class Quadrilatero extends PoligonoRegular {
 
-    public Quadrilatero(List<Double> medidasLados) {
-        super(medidasLados);
+    public Quadrilatero(Double medidaLado) {
+        super(medidaLado, 4);
     }
 
     @Override
     public Double calcularArea() {
-        return this.medidasLados.get(0) * this.medidasLados.get(1);
+        return medidaLado * medidaLado;
     }
 
-    @Override
-    public String toString() {
-        return "Quadrilátero{" +
-                "medidasLados=" + medidasLados +
-                '}';
+    public Double calcularAltura(Double lado1, Double lado2, Double lado3, Double lado4) {
+        return Math.min(lado1, lado2);
     }
+
+    public Double calcularPerimetro() {
+        return this.quantidadeLados * this.medidaLado;
+    }
+
 
 }
