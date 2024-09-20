@@ -11,14 +11,12 @@ import java.util.List;
 @Data
 public abstract class PoligonoRegular implements Forma {
 
-    protected List<Double> medidasLados;
+    protected Double medidaLado;
 
-    public Integer quantidadeDeLados() {
-        return this.medidasLados.size();
-    }
+    protected Integer quantidadeLados;
 
     public Double calcularPerimetro() {
-        return this.medidasLados.stream().mapToDouble(Double::doubleValue).sum();
+        return this.quantidadeLados * this.medidaLado;
     }
 
 }

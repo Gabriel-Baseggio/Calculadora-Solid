@@ -9,15 +9,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Triangulo extends PoligonoRegular {
+public class Pentagono extends PoligonoRegular {
 
     @Override
     public Double calcularArea() {
-        return medidaLado * calcularAltura() / 2;
-    }
-
-    public Double calcularAltura() {
-        return Math.sqrt(3) * medidaLado / 2;
+        return null;
     }
 
 }
