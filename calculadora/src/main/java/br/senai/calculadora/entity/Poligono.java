@@ -17,6 +17,8 @@ public abstract class Poligono implements Forma {
         return this.medidasLados.size();
     }
 
-    public abstract Double calcularPerimetro();
+    public Double calcularPerimetro() {
+        return this.medidasLados.stream().mapToDouble(Double::doubleValue).sum();
+    }
 
 }

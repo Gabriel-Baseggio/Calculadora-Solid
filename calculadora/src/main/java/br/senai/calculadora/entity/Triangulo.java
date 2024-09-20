@@ -19,8 +19,12 @@ public class Triangulo extends Poligono {
         return null;
     }
 
-    public static boolean verificarLados() {
+    public static Boolean verificarLados() {
         return true;
+    }
+
+    public Double calcularAltura() {
+        return null;
     }
 
 }
