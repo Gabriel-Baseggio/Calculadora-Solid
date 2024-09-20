@@ -1,6 +1,6 @@
 package br.senai.calculadora.controller;
 
-import br.senai.calculadora.controller.dto.FormaDTO;
+import br.senai.calculadora.controller.dto.PoligonoRegularDTO;
 import br.senai.calculadora.service.QuadrilateroService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -18,12 +18,12 @@ public class QuadrilateroController {
     private QuadrilateroService quadrilateroService;
 
     @PostMapping("/area")
-    public ResponseEntity<?> calcularArea(@RequestBody FormaDTO dto) {
+    public ResponseEntity<?> calcularArea(@RequestBody PoligonoRegularDTO dto) {
         return new ResponseEntity<>(quadrilateroService.calcularArea(dto.medidaLado()), HttpStatus.OK);
     }
 
     @PostMapping("/perimetro")
-    public ResponseEntity<?> calcularPerimetro(@RequestBody FormaDTO dto) {
+    public ResponseEntity<?> calcularPerimetro(@RequestBody PoligonoRegularDTO dto) {
         return new ResponseEntity<>(quadrilateroService.calcularPerimetro(dto.medidaLado()), HttpStatus.OK);
     }
 
