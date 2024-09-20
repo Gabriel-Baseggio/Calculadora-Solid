@@ -15,12 +15,18 @@ public class Pentagono extends PoligonoRegular {
 
     @Override
     public Double calcularArea() {
-        return 5 * medidaLado * calcularApotema();
+        return 5 * calcularAreaTrianguloUnico();
     }
 
     public Double calcularApotema() {
         Triangulo triangulo = new Triangulo(medidaLado);
         return triangulo.calcularAltura();
     }
+
+    public Double calcularAreaTrianguloUnico() {
+        Triangulo triangulo = new Triangulo(medidaLado);
+        return triangulo.calcularArea();
+    }
+
 
 }

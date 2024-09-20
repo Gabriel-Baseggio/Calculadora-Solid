@@ -1,7 +1,7 @@
 package br.senai.calculadora.controller;
 
 import br.senai.calculadora.controller.dto.FormaDTO;
-import br.senai.calculadora.service.TrianguloService;
+import br.senai.calculadora.service.PentagonoService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,25 +11,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/triangulo")
+@RequestMapping("/pentagono")
 @AllArgsConstructor
-public class TrianguloController {
+public class PentagonoController {
 
-    private TrianguloService trianguloService;
+    private PentagonoService pentagonoService;
 
     @PostMapping("/area")
     public ResponseEntity<?> calcularArea(@RequestBody FormaDTO dto) {
-        return new ResponseEntity<>(trianguloService.calcularArea(dto.medidaLado()), HttpStatus.OK);
+        return new ResponseEntity<>(pentagonoService.calcularArea(dto.medidaLado()), HttpStatus.OK);
     }
 
     @PostMapping("/perimetro")
     public ResponseEntity<?> calcularPerimetro(@RequestBody FormaDTO dto) {
-        return new ResponseEntity<>(trianguloService.calcularPerimetro(dto.medidaLado()), HttpStatus.OK);
+        return new ResponseEntity<>(pentagonoService.calcularPerimetro(dto.medidaLado()), HttpStatus.OK);
     }
 
-    @PostMapping("/altura")
-    public ResponseEntity<?> calcularAltura(@RequestBody FormaDTO dto) {
-        return new ResponseEntity<>(trianguloService.calcularAltura(dto.medidaLado()), HttpStatus.OK);
+    @PostMapping("/apotema")
+    public ResponseEntity<?> calcularApotema(@RequestBody FormaDTO dto) {
+        return new ResponseEntity<>(pentagonoService.calcularApotema(dto.medidaLado()), HttpStatus.OK);
     }
 
 }
