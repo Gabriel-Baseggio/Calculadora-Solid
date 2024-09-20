@@ -1,7 +1,10 @@
 package br.senai.calculadora.entity;
 
-import java.util.List;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode(callSuper = true)
+@Data
 public class Quadrilatero extends PoligonoRegular {
 
     public Quadrilatero(Double medidaLado) {
@@ -10,7 +13,7 @@ public class Quadrilatero extends PoligonoRegular {
 
     @Override
     public Double calcularArea() {
-        return medidaLado * medidaLado;
+        return Math.pow(medidaLado, 2);
     }
 
 }
