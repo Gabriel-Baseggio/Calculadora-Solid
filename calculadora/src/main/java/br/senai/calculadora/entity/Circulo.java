@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class Circulo implements Forma{
-    private Double raio;
 
+    private Double raio;
 
     @Override
     public Double calcularArea() {
@@ -23,4 +23,5 @@ public class Circulo implements Forma{
     public Double calcularCircunferencia(){
         return 2 * Math.PI * raio;
     }
+
 }

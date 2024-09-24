@@ -5,9 +5,9 @@ import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class Quadrilatero extends PoligonoRegular {
+public class Quadrado extends PoligonoRegular {
 
-    public Quadrilatero(Double medidaLado) {
+    public Quadrado(Double medidaLado) {
         super(medidaLado, 4);
     }
 
